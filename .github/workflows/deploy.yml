@@ -27,7 +27,7 @@ jobs:
         run: npm run build
         env:
           NODE_ENV: production
-          PUBLIC_URL: /at2-web-app-using-components-vungo05
+          PUBLIC_URL: /at2-web-app-using-components-vungo05-master-2
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4

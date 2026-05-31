@@ -15,7 +15,7 @@ import TravelGuidesPage from "./components/travel-guides-page/TravelGuidesPage";
 // Basename for the React Router
 const basename =
     process.env.NODE_ENV === "production"
-        ? "/at2-web-app-using-components-vungo05/"
+        ? "/at2-web-app-using-components-vungo05-master-2/"
         : "/";
         
 function App() {
