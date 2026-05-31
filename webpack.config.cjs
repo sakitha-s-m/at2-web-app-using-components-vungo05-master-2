@@ -45,7 +45,14 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
+    new CopyPlugin({
+        patterns: [
+            { from: "public/images", to: "images" },
+            { from: "public/fonts", to: "fonts" },
+        ],
+    }),
   ],
+  
   devServer: {
     static: {
       directory: path.join(__dirname, "public"),
