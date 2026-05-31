@@ -26,17 +26,16 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader', 
-          {
-            loader: 'css-loader',
-            options: {
-              url: false,
-            },
-          },
+          'style-loader',
+          'css-loader',
         ],
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg)$/i,
+        type: "asset/resource",
+      },
+      {
+        test: /\.(eot|ttf|woff|woff2|otf)$/i,
         type: "asset/resource",
       },
     ],
@@ -46,13 +45,12 @@ module.exports = {
       template: "./public/index.html",
     }),
     new CopyPlugin({
-        patterns: [
-            { from: "public/images", to: "images" },
-            { from: "public/fonts", to: "fonts" },
-        ],
+      patterns: [
+        { from: "public/images", to: "images" },
+      ],
     }),
   ],
-  
+
   devServer: {
     static: {
       directory: path.join(__dirname, "public"),
