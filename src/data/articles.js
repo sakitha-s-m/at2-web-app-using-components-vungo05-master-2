@@ -3,7 +3,7 @@
 const articles = [
     {
         id: 1,
-        image: "http://placehold.co/766x515",
+        image: "https://placehold.co/766x515",
         date: "July 30, 2014",
         comments: 2,
         tags: "Properties, Prices, best deals",
@@ -12,7 +12,7 @@ const articles = [
     },
     {
         id: 2,
-        image: "http://placehold.co/766x515",
+        image: "https://placehold.co/766x515",
         date: "July 24, 2014",
         comments: 4,
         tags: "Tips, Mortgage",
@@ -21,7 +21,7 @@ const articles = [
     },
     {
         id: 3,
-        image: "http://placehold.co/766x515",
+        image: "https://placehold.co/766x515",
         date: "July 05, 2014",
         comments: 1,
         tags: "Location, Price, House",

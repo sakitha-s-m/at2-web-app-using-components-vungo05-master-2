@@ -3,7 +3,7 @@
 const deals = [
     {
         id: 1,
-        image: "http://placehold.co/100x100",
+        image: "https://placehold.co/100x100",
         availability: "Available Now",
         title: "Private Beach House",
         location: "Lossarnach, Eriador",
@@ -11,7 +11,7 @@ const deals = [
     },
     {
         id: 2,
-        image: "http://placehold.co/100x100",
+        image: "https://placehold.co/100x100",
         availability: "Available 24 July",
         title: "Mountain Views Cabin",
         location: "Hyarnustar, Rhovanion",
@@ -19,7 +19,7 @@ const deals = [
     },
     {
         id: 3,
-        image: "http://placehold.co/100x100",
+        image: "https://placehold.co/100x100",
         availability: "Available 5 July",
         title: "Heart of the Village",
         location: "Minhiriath, Eriador",
@@ -27,7 +27,7 @@ const deals = [
     },
     {
         id: 4,
-        image: "http://placehold.co/100x100",
+        image: "https://placehold.co/100x100",
         availability: "Available 6 July",
         title: "The City Life Apartment",
         location: "West Beleriand, Mordor",
