@@ -1,20 +1,19 @@
 const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const isProd = process.env.NODE_ENV === "production";
 
-// For project pages: '/my-react-app/'
-// For user/org pages: '/' (root)
 const publicUrl = process.env.PUBLIC_URL ?? (isProd ? "/at2-web-app-using-components-vungo05/" : "/");
 
 module.exports = {
   entry: "./src/index.js",
   output: {
-    filename: "[name].[contenthash].js", // better caching
+    filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
-    clean: true, // clean dist on build
-    publicPath: publicUrl, // critical for GH Pages
+    clean: true,
+    publicPath: publicUrl,
   },
   module: {
     rules: [
@@ -26,14 +25,11 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
               url: false,
-              // import: {
-              //   filter: (url) => !url.includes('font-awesome') && !url.includes('bootstrap'),
-              // },
             },
           },
         ],
@@ -48,14 +44,16 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     }),
+    new MiniCssExtractPlugin({
+      filename: "[name].css",
+    }),
     new CopyPlugin({
-        patterns: [
-            { from: "public/images", to: "images" },
-            { from: "public/fonts", to: "fonts" },
-        ],
+      patterns: [
+        { from: "public/images", to: "images" },
+        { from: "public/fonts", to: "fonts" },
+      ],
     }),
   ],
-  
   devServer: {
     static: {
       directory: path.join(__dirname, "public"),
@@ -65,9 +63,3 @@ module.exports = {
     historyApiFallback: true,
   },
 };
-
-// Then run this
-// npm install --save-dev style-loader css-loader
-// npm run build
-// npm start
-// Check build folder
