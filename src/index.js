@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-
+// removed
 // Global CSS import
 import './css/style.css';
 

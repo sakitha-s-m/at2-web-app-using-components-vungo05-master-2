@@ -26,11 +26,14 @@ module.exports = {
       {
         test: /\.css$/,
         use: [
-          'style-loader', 
+          'style-loader',
           {
             loader: 'css-loader',
             options: {
               url: false,
+              import: {
+                filter: (url) => !url.includes('font-awesome') && !url.includes('bootstrap'),
+              },
             },
           },
         ],
