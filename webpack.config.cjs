@@ -31,9 +31,9 @@ module.exports = {
             loader: 'css-loader',
             options: {
               url: false,
-              import: {
-                filter: (url) => !url.includes('font-awesome') && !url.includes('bootstrap'),
-              },
+              // import: {
+              //   filter: (url) => !url.includes('font-awesome') && !url.includes('bootstrap'),
+              // },
             },
           },
         ],
