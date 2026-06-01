@@ -1,6 +1,7 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 // Global CSS import
+import './css/bootstrap.min.css';
 import './css/style.css';
 
 // Root application component
