@@ -13,10 +13,7 @@ import ContactPage from "./components/contact-page/ContactPage";
 import TravelGuidesPage from "./components/travel-guides-page/TravelGuidesPage";
 
 // Basename for the React Router
-const basename =
-    process.env.NODE_ENV === "production"
-        ? "/at2-web-app-using-components-vungo05-master-2/"
-        : "/";
+const basename = "/";
         
 function App() {
     return (
